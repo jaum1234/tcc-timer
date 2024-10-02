@@ -1,8 +1,9 @@
+require("dotenv").config();
 const { createServer } = require("http");
 const fs = require("fs");
 
 const server = createServer((req, res) => {
-    let file = ""; 
+    let file = "";
 
     if (req.url.includes("img")) {
         file = "instagram_logo.png"; 
@@ -10,7 +11,7 @@ const server = createServer((req, res) => {
         file = "index.html";
     }
 
-    fs.readFile(`./${file}`, (err, data) => {
+    fs.readFile(`./public/${file}`, (err, data) => {
         if (err) {
             throw err;
         }
@@ -19,8 +20,8 @@ const server = createServer((req, res) => {
     });
 });
 
-const port = 3001;
+const port = process.env.APP_PORT;
 
-server.listen(3001, () => {
-    console.log("Ouvindo na porta " + 3001);
+server.listen(process.env.APP_PORT, () => {
+    console.log("Listening on port " + process.env.APP_PORT);
 });
