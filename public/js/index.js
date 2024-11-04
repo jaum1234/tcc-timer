@@ -20,7 +20,7 @@ const countDown = () => {
         const formattedMinutes = String(minutes).padStart(2, '0');
         const formattedSeconds = String(seconds).padStart(2, '0');
 
-        document.getElementById('timer').innerHTML = `${formattedHours}:${formattedMinutes}:${formattedSeconds}`; 
+        document.querySelector('.deadline-days').innerHTML = `${formattedHours}:${formattedMinutes}:${formattedSeconds}`; 
     }, 1000);
 };
 

@@ -1,0 +1,25 @@
+.movie {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.movie__x {
+    height: 10rem;
+    transform: perspective(500px) rotateX(30deg); 
+    transform-origin: bottom; 
+}
+
+.movie__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) perspective(500px) rotateX(30deg);
+    /* text-align: center;
+    transform: perspective(500px) rotateX(30deg); 
+    transform-origin: bottom; 
+   */ font-family: "Archivo Black", sans-serif;
+    text-transform: uppercase; 
+}

@@ -23,8 +23,12 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
+	background: black; 
+    color: white;
+    overflow: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -41,42 +45,3 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-body {
-    background: black; 
-    color: white;
-    overflow: hidden;
-}
-
-.instagram_logo {
-    width: 50px;
-    height: 50px;
-}
-
-.timer {
-    font-family: "Rajdhani", sans-serif;
-    font-size: 40pt;
-    font-weight: bold;
-    font-style: italic;
-    color: red;
-    margin-bottom: 1rem;
-    letter-spacing: 0.1em;
-    background-color: black;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.timer::before {
-    filter: blur(8px);
-}
-
-.movie {
-    font-size: 50pt;
-}
-
-.container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} 
