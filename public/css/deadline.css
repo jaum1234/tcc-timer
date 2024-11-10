@@ -19,26 +19,8 @@ See you.
 
 */
 
-html {
-    font-size: 1em;
-    line-height: 1.4;
-}
-
-html,
-body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background: #000;
-}
-
-
-
 #deadline {
-    width:581px;
+    width:800px;
     max-width: 100%;
 }
 
@@ -49,15 +31,11 @@ body {
 #progress-time-fill {
     animation-name: progress-fill; 
     animation-timing-function: linear; 
-    animation-iteration-count: infinite;
 }
 
-/* Death */
 #death-group {
     animation-name: walk;
-    animation-timing-function: ease; 
-    animation-iteration-count: infinite;
-    transform: translateX(0);
+    animation-timing-function: linear; 
 }
 
 #death-arm {
@@ -71,15 +49,7 @@ body {
     transform-origin: -48px center;
 }
 
-/* Designer */
-
-#designer-arm-grop {
-    animation: write 1.5s ease infinite;
-    transform: translate(0, 0) rotate(0deg) scale(1, 1);
-    transform-origin: 90% top;
-}
-
-.deadline-days {
+.timer {
     font-family: "Roboto Mono", monospace;
     font-style: italic;
     font-size: 4rem;
@@ -88,109 +58,23 @@ body {
     text-align: center;
     margin: 0 auto;
     position: relative;
+    margin-bottom: 2rem;
 }
 
-.deadline-days .inner {
+.timer .inner {
     width: 100px;
     position: relative;
     top: 0;
     left: 0;
 }
 
-.mask-red,
-.mask-white {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
-}
-
-.mask-red {
-    left: 0;
-    width: 0;
-    color: #FF0000;
-    animation: text-red 20s ease infinite;
-    z-index: 2;
-    /* background: #000; */
-}
-.mask-white {
-    right: 0;
-}
-
-/* Flames */
-
-#red-flame {
-    opacity: 0;
-    animation: show-flames 20s ease infinite, red-flame 120ms ease infinite;
-    transform-origin: center bottom;
-}
-
-#yellow-flame {
-    opacity: 0;
-    animation: show-flames 20s ease infinite, yellow-flame 120ms ease infinite;
-    transform-origin: center bottom;
-}
-
-#white-flame {
-    opacity: 0;
-    animation: show-flames 20s ease infinite, red-flame 100ms ease infinite;
-    transform-origin: center bottom;
-}
-
 @keyframes progress-fill {
-    0% {
-        x: -100%;
-    }
-
     100% {
-        x: -3%;
+        x: 0;
     }
 }
 
 @keyframes walk {
-    0% {
-        transform: translateX(0);
-    }
-    6% {
-        transform: translateX(0);
-    }
-    10% {
-        transform: translateX(100px);
-    }
-
-    15% {
-        transform: translateX(140px);
-    }
-
-    25% {
-        transform: translateX(170px);
-    }
-
-    35% {
-        transform: translateX(220px);
-    }
-
-    45% {
-        transform: translateX(280px);
-    }
-
-    55% {
-        transform: translateX(340px);
-    }
-
-    65% {
-        transform: translateX(370px);
-    }
-
-    75% {
-        transform: translateX(430px);
-    }
-
-    85% {
-        transform: translateX(460px);
-    }
-
     100% {
         transform: translateX(520px);
     }
@@ -231,91 +115,3 @@ body {
         transform: rotate(0);
     }
 }
-
-/* Design animations */
-/* 
-@keyframes write {
-    0% {
-        transform: translate(0, 0) rotate(0deg) scale(1, 1);
-    }
-
-    16% {
-        transform: translate(0px, 0px) rotate(5deg) scale(0.8, 1);
-    }
-
-    32% {
-        transform: translate(0px, 0px) rotate(0deg) scale(1, 1);
-    }
-
-    48% {
-        transform: translate(0px, 0px) rotate(6deg) scale(0.8, 1);
-    }
-
-    65% {
-        transform: translate(0px, 0px) rotate(0deg) scale(1, 1);
-    }
-
-    83% {
-        transform: translate(0px, 0px) rotate(4deg) scale(0.8, 1);
-    }
-} */
-
-/* @keyframes text-red {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 98%;
-    }
-} */
-
-/* @keyframes show-flames {
-    0% {
-        opacity: 0;
-    }
-    74% {
-        opacity: 0;
-    }
-    80% {
-        opacity: 1;
-    }
-    99% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes red-flame {
-    0% {
-        transform: translateY(-30px) scale(1, 1);
-    }
-
-    25% {
-        transform: translateY(-30px) scale(1.1, 1.1);
-    }
-
-    75% {
-        transform: translateY(-30px) scale(0.8, 0.7); 
-    }
-
-    100% {
-        transform: translateY(-30px) scale(1, 1); 
-    }
-}
-
-@keyframes yellow-flame {
-    0% {
-        transform: translateY(-30px) scale(0.8, 0.7);
-    }
-
-    50% {
-        transform: translateY(-30px) scale(1.1, 1.2);
-    }
-
-    100% {
-        transform: translateY(-30px) scale(1, 1);
-    }
-} */
