@@ -7,11 +7,6 @@
     align-items: center; 
 } 
 
-.instagram_logo {
-    width: 40px;
-    height: 40px;
-}
-
 .timer::before {
     filter: blur(8px);
 }
